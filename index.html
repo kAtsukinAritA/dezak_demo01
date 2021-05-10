@@ -1,10 +1,19 @@
 <html>   
-       &amp;amp;lt;p&amp;amp;gt;
-           &amp;amp;lt;img src="images/m01.png" alt="ジャンケン" id="janken" &amp;amp;gt;
-       &amp;amp;lt;/p&amp;amp;gt;
-       &amp;amp;lt;p&amp;amp;gt;
-           &amp;amp;lt;button type="button"&amp;amp;gt;いち&amp;amp;lt;/button&amp;amp;gt;
-           &amp;amp;lt;button type="button"&amp;amp;gt;にー&amp;amp;lt;/button&amp;amp;gt;
-           &amp;amp;lt;button type="button"&amp;amp;gt;さん&amp;amp;lt;/button&amp;amp;gt;
-       &amp;amp;lt;/p&amp;amp;gt;
+    <body>
+        <img id="mypic" onclick="slideshow()" src="m01.png" width="400" height="400">
+            <script>
+            var pics_src = new Array("m01.png","m02.png","m03.png");
+            var num = 0;
+
+            function slideshow(){
+                if (num == 2) {
+                    num = 0;
+                }
+                else {
+                    num ++;
+                }
+                document.getElementById("mypic").src=pics_src[num];
+            }
+            </script>
+    </body>
 </html>
